@@ -1,66 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Inscription</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./design/connexion.css">
+    <title>connection</title>
     <script type="application/x-javascript">
-        addEventListener("load", function() {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
+        $('.message a').click(function() {
+            $('form').animate({
+                height: "toggle",
+                opacity: "toggle"
+            }, "slow");
+        });
     </script>
-    <!-- Custom Theme files -->
-    <link href="./design/style.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- //Custom Theme files -->
-    <!-- web font -->
-    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-    <!-- //web font -->
 </head>
 
 <body>
-    <!-- main -->
-    <div class="main-w3layouts wrapper">
-        <h1>Inscription</h1>
-        <div class="main-agileinfo">
-            <div class="agileits-top">
-                <form action="#" method="post">
-                    <input class="text" type="text" name="Username" placeholder="Username" required="">
-                    <input class="text email" type="email" name="email" placeholder="Email" required="">
-                    <input class="text" type="password" name="password" placeholder="Password" required="">
-                    <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
-                    <div class="wthree-text">
-                        <label class="anim">
-                            <input type="checkbox" class="checkbox" required="">
-                            <span>se souenir moi moi ?</span>
-                        </label>
-                        <div class="clear"> </div>
-                    </div>
-                    <input type="submit" value="SIGNUP">
-                </form>
-                <p>Deja inscrit? <a href="./connexion.php"> connect toi !</a></p>
-            </div>
-        </div>
+    <canvas id="myCanvas">
 
-        <!-- //copyright -->
-        <ul class="colorlib-bubbles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+
+    </canvas>
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form">
+                <input type="email" name="email" placeholder="email" />
+                <input type="password" name="password" placeholder="password" />
+                <button>login</button>
+                <div class="wthree-text">
+                    <label class="anim">
+                        <input type="checkbox" class="checkbox" name="connect">
+                        <span>se souenir moi moi ?</span>
+                    </label>
+                    <div class="clear"> </div>
+                </div>
+                <p class="message">Pas encore inscrit ? <a href="inscription.php">Creer un compte</a></p>
+            </form>
+        </div>
     </div>
-    <!-- //main -->
 </body>
 
 </html>

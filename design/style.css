@@ -1,112 +1,3 @@
-/*--
-Author: Colorlib
-Author URL: https://colorlib.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
-/*-- reset --*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-dl,
-dt,
-dd,
-ol,
-nav ul,
-nav li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
 ol,
 ul {
   list-style: none;
@@ -159,11 +50,6 @@ a {
 /* float right */
 .float-lt {
   float: left;
-}
-
-/* float left */
-.clear {
-  clear: both;
 }
 
 /* clear float */
@@ -350,80 +236,6 @@ input[type="submit"]:hover {
 
 /*-- //main --*/
 /*-- checkbox --*/
-.wthree-text label {
-  font-size: 0.9em;
-  color: #fff;
-  font-weight: 200;
-  cursor: pointer;
-  position: relative;
-}
-
-input.checkbox {
-  background: #51bfe0;
-  cursor: pointer;
-  width: 1.2em;
-  height: 1.2em;
-}
-
-input.checkbox:before {
-  content: "";
-  position: absolute;
-  width: 1.2em;
-  height: 1.2em;
-  background: inherit;
-  cursor: pointer;
-}
-
-input.checkbox:after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0;
-  z-index: 1;
-  width: 1.2em;
-  height: 1.2em;
-  border: 1px solid #fff;
-  -webkit-transition: 0.4s ease-in-out;
-  -moz-transition: 0.4s ease-in-out;
-  -o-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
-}
-
-input.checkbox:checked:after {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  height: 0.5rem;
-  border-color: #fff;
-  border-top-color: transparent;
-  border-right-color: transparent;
-}
-
-.anim input.checkbox:checked:after {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  height: 0.5rem;
-  border-color: transparent;
-  border-right-color: transparent;
-  animation: 0.4s rippling 0.4s ease;
-  animation-fill-mode: forwards;
-}
-
-@keyframes rippling {
-  50% {
-    border-left-color: #fff;
-  }
-
-  100% {
-    border-bottom-color: #fff;
-    border-left-color: #fff;
-  }
-}
 
 /*-- //checkbox --*/
 /*-- copyright --*/
@@ -779,16 +591,6 @@ input.checkbox:checked:after {
     background-position: 0 0px;
   }
 
-  .wthree-text ul li,
-  .wthree-text ul li:nth-child(2) {
-    display: block;
-    float: none;
-  }
-
-  .wthree-text ul li:nth-child(2) {
-    margin-top: 1.5em;
-  }
-
   input[type="submit"] {
     margin: 2em 0 1.5em;
     letter-spacing: 3px;
@@ -861,10 +663,6 @@ input.checkbox:checked:after {
   }
 
   .colorlibcopy-agile p {
-    font-size: 0.85em;
-  }
-
-  .wthree-text label {
     font-size: 0.85em;
   }
 

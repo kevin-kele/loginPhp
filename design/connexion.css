@@ -1,5 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#myCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#33b7df, #045a74);
+}
 .login-page {
   width: 360px;
   padding: 8% 0 0;
@@ -91,8 +104,8 @@
 .container .info span .fa {
   color: #ef3b3a;
 }
-body {
-  background: #33b7df; /* fallback for old browsers */
+/* body {
+  background: #33b7df;
   background: -webkit-linear-gradient(right, #33b7df, #51bfe0);
   background: -moz-linear-gradient(right, #33b7df, #51bfe0);
   background: -o-linear-gradient(right, #33b7df, #51bfe0);
@@ -100,4 +113,96 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} */
+.wthree-text {
+  margin-top: 10px;
+}
+.wthree-text label {
+  font-size: 0.9em;
+  color: rgb(0, 0, 0);
+  font-weight: 200;
+  cursor: pointer;
+  position: relative;
+}
+
+.wthree-text label {
+  font-size: 0.85em;
+}
+
+.wthree-text ul li:nth-child(2) {
+  margin-top: 1.5em;
+}
+
+.wthree-text ul li,
+.wthree-text ul li:nth-child(2) {
+  display: block;
+  float: none;
+}
+.clear {
+  clear: both;
+}
+
+.anim input.checkbox:checked:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  height: 0.5rem;
+  border-color: transparent;
+  border-right-color: transparent;
+  animation: 0.4s rippling 0.4s ease;
+  animation-fill-mode: forwards;
+}
+input.checkbox {
+  background: #51bfe0;
+  cursor: pointer;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+input.checkbox:before {
+  content: "";
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+  background: inherit;
+  cursor: pointer;
+}
+
+input.checkbox:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid #fff;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+input.checkbox:checked:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  height: 0.5rem;
+  border-color: #fff;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+@keyframes rippling {
+  50% {
+    border-left-color: #fff;
+  }
+
+  100% {
+    border-bottom-color: #fff;
+    border-left-color: #fff;
+  }
 }
