@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require('src/connection.php');
 
 
@@ -97,14 +97,20 @@ if (!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['passwo
 
                     <p> <?php echo "Inscription reussi" ?> </p>
                 <?php }  ?>
-                <form action="#" method="post">
-                    <input class="text" type="text" name="pseudo" placeholder="pseudo" required>
-                    <input class="text email" type="email" name="email" placeholder="Email" required>
-                    <input class="text" type="password" name="password" placeholder="Password" required>
-                    <input class="text w3lpass" type="password" name="password_confirm" placeholder="Confirm Password" required>
-                    <input type="submit" value="SIGNUP">
-                </form>
-                <p>Deja inscrit? <a href="./index.php"> connect toi !</a></p>
+                <?php if (!isset($_SESSION['connect'])) { ?>
+                    <form action="#" method="post">
+                        <input class="text" type="text" name="pseudo" placeholder="pseudo" required>
+                        <input class="text email" type="email" name="email" placeholder="Email" required>
+                        <input class="text" type="password" name="password" placeholder="Password" required>
+                        <input class="text w3lpass" type="password" name="password_confirm" placeholder="Confirm Password" required>
+                        <input type="submit" value="SIGNUP">
+                    </form>
+                    <p>Deja inscrit? <a href="./index.php"> connect toi !</a></p>
+                <?php } else {
+                    echo 'Bienvenue mr ' . $_SESSION['pseudo']; ?>
+                    <p> <a href="./disconnection.php">Deconnexion </a> </p>
+                <?php  } ?>
+
             </div>
         </div>
 

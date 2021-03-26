@@ -195,7 +195,9 @@ input.checkbox:checked:after {
   border-top-color: transparent;
   border-right-color: transparent;
 }
-
+#error {
+  background-color: #ef3b3a;
+}
 @keyframes rippling {
   50% {
     border-left-color: #fff;
